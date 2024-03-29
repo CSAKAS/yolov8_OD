@@ -1,0 +1,6 @@
+train: ./maimai/train/images
+val: ./maimai/valid/images
+test: ./maimai/test/images
+
+nc: 1
+names: ['maimai']
