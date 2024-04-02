@@ -32,11 +32,11 @@ def main():
                                 project="YOLOv8-ISDN6830-ObjectDetection"
     )
     elif(args[0] == "val"):
-        metrics = model.val()  # no arguments needed, dataset and settings remembered
-        metrics.box.map    # map50-95
-        metrics.box.map50  # map50
-        metrics.box.map75  # map75
-        metrics.box.maps   # a list contains map50-95 of each category
+        metrics = model.val()  
+        metrics.box.map    
+        metrics.box.map50  
+        metrics.box.map75  
+        metrics.box.maps   
 
     elif(args[0] == "export"):
         model.export(format='onnx')
