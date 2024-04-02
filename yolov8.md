@@ -21,9 +21,9 @@ Resize all pictures to 640*640
 output weights as "best.pt"
 ## Validation
 Load "best.pt"  
-![dataset](./runs/detect/val/val_batch0_pred.jpg)  
+![dataset](./imgs/val_batch0_pred.jpg)  
 mAP  
-![mAP](./runs/detect/val/PR_curve.png)  
+![mAP](./imgs/PR_curve.png)  
 
 ## Prediction
 ![dataset](./imgs/pred1.png)  
