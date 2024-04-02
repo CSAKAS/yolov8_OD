@@ -20,12 +20,26 @@ if(args[0] == "train"):
                             save=True, 
                             save_period=30,
                             project="YOLOv8-ISDN6830-ObjectDetection"
+def main():
+    if(args[0] == "train"):
+        results = model.train(
+                                data='maimai.yaml', 
+                                epochs=100, 
+                                batch=1,
+                                imgsz=640, 
+                                save=True, 
+                                save_period=30,
+                                project="YOLOv8-ISDN6830-ObjectDetection"
     )
-elif(args[0] == "val"):
-    metrics = model.val()  # no arguments needed, dataset and settings remembered
-    metrics.box.map    # map50-95
-    metrics.box.map50  # map50
-    metrics.box.map75  # map75
-    metrics.box.maps   # a list contains map50-95 of each category
+    elif(args[0] == "val"):
+        metrics = model.val()  # no arguments needed, dataset and settings remembered
+        metrics.box.map    # map50-95
+        metrics.box.map50  # map50
+        metrics.box.map75  # map75
+        metrics.box.maps   # a list contains map50-95 of each category
 
+    elif(args[0] == "export"):
+        model.export(format='onnx')
 
+if __name__ == "__main__":
+    main()
