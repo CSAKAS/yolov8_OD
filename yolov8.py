@@ -11,7 +11,7 @@ os.environ["COMET_API_KEY"] = "aj85EqZJE9ZTII3FMaReNU1kw"
 model = YOLO('best.pt')  # load a pretrained model (recommended for training)
 #model = YOLO('yolov8n.yaml').load('yolov8n.pt')  # build from YAML and transfer weights
 
-if(args[0] == "train")
+if(args[0] == "train"):
     results = model.train(
                             data='maimai.yaml', 
                             epochs=100, 
@@ -21,7 +21,7 @@ if(args[0] == "train")
                             save_period=30,
                             project="YOLOv8-ISDN6830-ObjectDetection"
     )
-elif(args[0] == "val")
+elif(args[0] == "val"):
     metrics = model.val()  # no arguments needed, dataset and settings remembered
     metrics.box.map    # map50-95
     metrics.box.map50  # map50
