@@ -12,7 +12,7 @@ Resize all pictures to 640*640
         results = model.train(
             data='maimai.yaml', 
             epochs=100, 
-            batch=1,
+            batch=8,
             imgsz=640, 
             save=True, 
             save_period=30,
